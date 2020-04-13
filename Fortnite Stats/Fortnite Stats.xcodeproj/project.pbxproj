@@ -1,0 +1,803 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4C252AD8243F89FA006FE8D3 /* StoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C252AD7243F89FA006FE8D3 /* StoreItem.swift */; };
+		4C252ADA243F9C05006FE8D3 /* StoreAndChallengesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C252AD9243F9C05006FE8D3 /* StoreAndChallengesViewController.swift */; };
+		4C252ADC243F9E0B006FE8D3 /* Ext+CollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C252ADB243F9E0B006FE8D3 /* Ext+CollectionViewDelegate.swift */; };
+		4C252ADE243F9EA6006FE8D3 /* Ext+CollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C252ADD243F9EA6006FE8D3 /* Ext+CollectionViewDataSource.swift */; };
+		4C252AE1243FA014006FE8D3 /* StoreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C252AE0243FA014006FE8D3 /* StoreCollectionViewCell.swift */; };
+		4C38FA2C2444ADC400C665CC /* FeaturedCellLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C38FA2B2444ADC400C665CC /* FeaturedCellLayout.swift */; };
+		4C5E604C2441BA0F00BA3E59 /* LifeTimeStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5E604B2441BA0F00BA3E59 /* LifeTimeStats.swift */; };
+		4C5E604E2441BA5A00BA3E59 /* SoloStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5E604D2441BA5A00BA3E59 /* SoloStats.swift */; };
+		4C5E60502441BA6500BA3E59 /* DuoStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5E604F2441BA6500BA3E59 /* DuoStats.swift */; };
+		4C5E60522441BA7400BA3E59 /* SquadStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5E60512441BA7400BA3E59 /* SquadStats.swift */; };
+		4C5E60542441DBF500BA3E59 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5E60532441DBF500BA3E59 /* Stats.swift */; };
+		4C6E66A3243E816800DA0E1B /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C6E66A2243E816800DA0E1B /* Montserrat-Light.ttf */; };
+		4C6E66A5243E823B00DA0E1B /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C6E66A4243E823B00DA0E1B /* Montserrat-Medium.ttf */; };
+		4C6E66A8243E834600DA0E1B /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6E66A7243E834600DA0E1B /* TextField.swift */; };
+		4C6E66AA243E877200DA0E1B /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C6E66A9243E877200DA0E1B /* Montserrat-SemiBold.ttf */; };
+		4C6E66AC243E87C200DA0E1B /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C6E66AB243E87C200DA0E1B /* Montserrat-Black.ttf */; };
+		4CD116C9243915460015B1F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD116C8243915460015B1F2 /* AppDelegate.swift */; };
+		4CD116CB243915460015B1F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD116CA243915460015B1F2 /* SceneDelegate.swift */; };
+		4CD116D0243915460015B1F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CD116CE243915460015B1F2 /* Main.storyboard */; };
+		4CD116D2243915470015B1F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CD116D1243915470015B1F2 /* Assets.xcassets */; };
+		4CD116D5243915470015B1F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CD116D3243915470015B1F2 /* LaunchScreen.storyboard */; };
+		4CD116E0243915470015B1F2 /* Fortnite_StatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD116DF243915470015B1F2 /* Fortnite_StatsTests.swift */; };
+		4CD116EB243915470015B1F2 /* Fortnite_StatsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD116EA243915470015B1F2 /* Fortnite_StatsUITests.swift */; };
+		4CD116FE243917020015B1F2 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD116FD243917020015B1F2 /* MainCoordinator.swift */; };
+		4CD11701243919870015B1F2 /* AccountSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD11700243919870015B1F2 /* AccountSearchViewController.swift */; };
+		4CD1170324391B0A0015B1F2 /* StatsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD1170224391B0A0015B1F2 /* StatsDetailViewController.swift */; };
+		4CD11705243922330015B1F2 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD116FB243915FF0015B1F2 /* Storyboarded.swift */; };
+		4CD117062439223B0015B1F2 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD116F9243915AB0015B1F2 /* Coordinator.swift */; };
+		4CD11709243932C60015B1F2 /* StatsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD11708243932C60015B1F2 /* StatsController.swift */; };
+		4CD1170B243939490015B1F2 /* BurbankBigCondensed-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4CD1170A243939490015B1F2 /* BurbankBigCondensed-Black.otf */; };
+		4CD1170E243943C40015B1F2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD1170D243943C40015B1F2 /* Constants.swift */; };
+		4CD1171324394C110015B1F2 /* PlayerStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD1171224394C110015B1F2 /* PlayerStats.swift */; };
+		4CEC2ABE2442FCA800D9BC9F /* StatsDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEC2ABD2442FCA800D9BC9F /* StatsDetailCollectionViewCell.swift */; };
+		4CEC2AC02443131300D9BC9F /* StatsDetailCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEC2ABF2443131300D9BC9F /* StatsDetailCollectionViewController.swift */; };
+		4CEFE16D243FF76700C7BDFE /* StoreCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEFE16C243FF76700C7BDFE /* StoreCollectionViewController.swift */; };
+		4CEFE1702440032300C7BDFE /* ConcurrentOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEFE16F2440032300C7BDFE /* ConcurrentOperations.swift */; };
+		4CEFE1722440036A00C7BDFE /* StoreItemPhotoOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEFE1712440036A00C7BDFE /* StoreItemPhotoOperation.swift */; };
+		4CEFE1742440047200C7BDFE /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEFE1732440047200C7BDFE /* Cache.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4CD116DC243915470015B1F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4CD116BD243915460015B1F2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4CD116C4243915460015B1F2;
+			remoteInfo = "Fortnite Stats";
+		};
+		4CD116E7243915470015B1F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4CD116BD243915460015B1F2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4CD116C4243915460015B1F2;
+			remoteInfo = "Fortnite Stats";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4C252AD7243F89FA006FE8D3 /* StoreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItem.swift; sourceTree = "<group>"; };
+		4C252AD9243F9C05006FE8D3 /* StoreAndChallengesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreAndChallengesViewController.swift; sourceTree = "<group>"; };
+		4C252ADB243F9E0B006FE8D3 /* Ext+CollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+CollectionViewDelegate.swift"; sourceTree = "<group>"; };
+		4C252ADD243F9EA6006FE8D3 /* Ext+CollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+CollectionViewDataSource.swift"; sourceTree = "<group>"; };
+		4C252AE0243FA014006FE8D3 /* StoreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCollectionViewCell.swift; sourceTree = "<group>"; };
+		4C38FA2B2444ADC400C665CC /* FeaturedCellLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCellLayout.swift; sourceTree = "<group>"; };
+		4C5E604B2441BA0F00BA3E59 /* LifeTimeStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeTimeStats.swift; sourceTree = "<group>"; };
+		4C5E604D2441BA5A00BA3E59 /* SoloStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoloStats.swift; sourceTree = "<group>"; };
+		4C5E604F2441BA6500BA3E59 /* DuoStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuoStats.swift; sourceTree = "<group>"; };
+		4C5E60512441BA7400BA3E59 /* SquadStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquadStats.swift; sourceTree = "<group>"; };
+		4C5E60532441DBF500BA3E59 /* Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
+		4C6E66A2243E816800DA0E1B /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		4C6E66A4243E823B00DA0E1B /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		4C6E66A7243E834600DA0E1B /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		4C6E66A9243E877200DA0E1B /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		4C6E66AB243E87C200DA0E1B /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.ttf"; sourceTree = "<group>"; };
+		4CD116C5243915460015B1F2 /* Fortnite Stats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fortnite Stats.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CD116C8243915460015B1F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4CD116CA243915460015B1F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4CD116CF243915460015B1F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4CD116D1243915470015B1F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4CD116D4243915470015B1F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4CD116D6243915470015B1F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CD116DB243915470015B1F2 /* Fortnite StatsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fortnite StatsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CD116DF243915470015B1F2 /* Fortnite_StatsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fortnite_StatsTests.swift; sourceTree = "<group>"; };
+		4CD116E1243915470015B1F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CD116E6243915470015B1F2 /* Fortnite StatsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fortnite StatsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CD116EA243915470015B1F2 /* Fortnite_StatsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fortnite_StatsUITests.swift; sourceTree = "<group>"; };
+		4CD116EC243915470015B1F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CD116F9243915AB0015B1F2 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		4CD116FB243915FF0015B1F2 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		4CD116FD243917020015B1F2 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		4CD11700243919870015B1F2 /* AccountSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSearchViewController.swift; sourceTree = "<group>"; };
+		4CD1170224391B0A0015B1F2 /* StatsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsDetailViewController.swift; sourceTree = "<group>"; };
+		4CD11708243932C60015B1F2 /* StatsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsController.swift; sourceTree = "<group>"; };
+		4CD1170A243939490015B1F2 /* BurbankBigCondensed-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BurbankBigCondensed-Black.otf"; sourceTree = "<group>"; };
+		4CD1170D243943C40015B1F2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4CD1171224394C110015B1F2 /* PlayerStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStats.swift; sourceTree = "<group>"; };
+		4CEC2ABD2442FCA800D9BC9F /* StatsDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsDetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		4CEC2ABF2443131300D9BC9F /* StatsDetailCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsDetailCollectionViewController.swift; sourceTree = "<group>"; };
+		4CEFE16C243FF76700C7BDFE /* StoreCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCollectionViewController.swift; sourceTree = "<group>"; };
+		4CEFE16F2440032300C7BDFE /* ConcurrentOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrentOperations.swift; sourceTree = "<group>"; };
+		4CEFE1712440036A00C7BDFE /* StoreItemPhotoOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItemPhotoOperation.swift; sourceTree = "<group>"; };
+		4CEFE1732440047200C7BDFE /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4CD116C2243915460015B1F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CD116D8243915470015B1F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CD116E3243915470015B1F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4C252ADF243F9FE0006FE8D3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4C252AE0243FA014006FE8D3 /* StoreCollectionViewCell.swift */,
+				4CEC2ABD2442FCA800D9BC9F /* StatsDetailCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4C38FA2A2444AD9B00C665CC /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				4C38FA2B2444ADC400C665CC /* FeaturedCellLayout.swift */,
+			);
+			path = Layouts;
+			sourceTree = "<group>";
+		};
+		4C6E66A6243E82F400DA0E1B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4C6E66A7243E834600DA0E1B /* TextField.swift */,
+				4CEFE1732440047200C7BDFE /* Cache.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		4CD116BC243915460015B1F2 = {
+			isa = PBXGroup;
+			children = (
+				4CD116C7243915460015B1F2 /* Fortnite Stats */,
+				4CD116DE243915470015B1F2 /* Fortnite StatsTests */,
+				4CD116E9243915470015B1F2 /* Fortnite StatsUITests */,
+				4CD116C6243915460015B1F2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4CD116C6243915460015B1F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4CD116C5243915460015B1F2 /* Fortnite Stats.app */,
+				4CD116DB243915470015B1F2 /* Fortnite StatsTests.xctest */,
+				4CD116E6243915470015B1F2 /* Fortnite StatsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4CD116C7243915460015B1F2 /* Fortnite Stats */ = {
+			isa = PBXGroup;
+			children = (
+				4C38FA2A2444AD9B00C665CC /* Layouts */,
+				4CEFE16E2440030000C7BDFE /* Operations */,
+				4C252ADF243F9FE0006FE8D3 /* Views */,
+				4C6E66A6243E82F400DA0E1B /* Helpers */,
+				4CD1171124394C020015B1F2 /* Model */,
+				4CD1170C243943B10015B1F2 /* Constants */,
+				4CD1170F2439469B0015B1F2 /* Fonts */,
+				4CD117072439329D0015B1F2 /* StatsController */,
+				4CD11704243921220015B1F2 /* Protocols */,
+				4CD116FF2439193B0015B1F2 /* View Controllers */,
+				4CD116F8243915680015B1F2 /* Coordinator */,
+				4CD116C8243915460015B1F2 /* AppDelegate.swift */,
+				4CD116CA243915460015B1F2 /* SceneDelegate.swift */,
+				4CD116CE243915460015B1F2 /* Main.storyboard */,
+				4CD116D1243915470015B1F2 /* Assets.xcassets */,
+				4CD116D3243915470015B1F2 /* LaunchScreen.storyboard */,
+				4CD116D6243915470015B1F2 /* Info.plist */,
+				4C252ADB243F9E0B006FE8D3 /* Ext+CollectionViewDelegate.swift */,
+				4C252ADD243F9EA6006FE8D3 /* Ext+CollectionViewDataSource.swift */,
+			);
+			path = "Fortnite Stats";
+			sourceTree = "<group>";
+		};
+		4CD116DE243915470015B1F2 /* Fortnite StatsTests */ = {
+			isa = PBXGroup;
+			children = (
+				4CD116DF243915470015B1F2 /* Fortnite_StatsTests.swift */,
+				4CD116E1243915470015B1F2 /* Info.plist */,
+			);
+			path = "Fortnite StatsTests";
+			sourceTree = "<group>";
+		};
+		4CD116E9243915470015B1F2 /* Fortnite StatsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4CD116EA243915470015B1F2 /* Fortnite_StatsUITests.swift */,
+				4CD116EC243915470015B1F2 /* Info.plist */,
+			);
+			path = "Fortnite StatsUITests";
+			sourceTree = "<group>";
+		};
+		4CD116F8243915680015B1F2 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				4CD116FD243917020015B1F2 /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		4CD116FF2439193B0015B1F2 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4CD11700243919870015B1F2 /* AccountSearchViewController.swift */,
+				4CD1170224391B0A0015B1F2 /* StatsDetailViewController.swift */,
+				4C252AD9243F9C05006FE8D3 /* StoreAndChallengesViewController.swift */,
+				4CEFE16C243FF76700C7BDFE /* StoreCollectionViewController.swift */,
+				4CEC2ABF2443131300D9BC9F /* StatsDetailCollectionViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		4CD11704243921220015B1F2 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4CD116F9243915AB0015B1F2 /* Coordinator.swift */,
+				4CD116FB243915FF0015B1F2 /* Storyboarded.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		4CD117072439329D0015B1F2 /* StatsController */ = {
+			isa = PBXGroup;
+			children = (
+				4CD11708243932C60015B1F2 /* StatsController.swift */,
+			);
+			path = StatsController;
+			sourceTree = "<group>";
+		};
+		4CD1170C243943B10015B1F2 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				4CD1170D243943C40015B1F2 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		4CD1170F2439469B0015B1F2 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4C6E66AB243E87C200DA0E1B /* Montserrat-Black.ttf */,
+				4C6E66A9243E877200DA0E1B /* Montserrat-SemiBold.ttf */,
+				4C6E66A4243E823B00DA0E1B /* Montserrat-Medium.ttf */,
+				4C6E66A2243E816800DA0E1B /* Montserrat-Light.ttf */,
+				4CD1170A243939490015B1F2 /* BurbankBigCondensed-Black.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		4CD1171124394C020015B1F2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4CD1171224394C110015B1F2 /* PlayerStats.swift */,
+				4C252AD7243F89FA006FE8D3 /* StoreItem.swift */,
+				4C5E604B2441BA0F00BA3E59 /* LifeTimeStats.swift */,
+				4C5E604D2441BA5A00BA3E59 /* SoloStats.swift */,
+				4C5E604F2441BA6500BA3E59 /* DuoStats.swift */,
+				4C5E60512441BA7400BA3E59 /* SquadStats.swift */,
+				4C5E60532441DBF500BA3E59 /* Stats.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4CEFE16E2440030000C7BDFE /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				4CEFE16F2440032300C7BDFE /* ConcurrentOperations.swift */,
+				4CEFE1712440036A00C7BDFE /* StoreItemPhotoOperation.swift */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4CD116C4243915460015B1F2 /* Fortnite Stats */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CD116EF243915470015B1F2 /* Build configuration list for PBXNativeTarget "Fortnite Stats" */;
+			buildPhases = (
+				4CD116C1243915460015B1F2 /* Sources */,
+				4CD116C2243915460015B1F2 /* Frameworks */,
+				4CD116C3243915460015B1F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Fortnite Stats";
+			productName = "Fortnite Stats";
+			productReference = 4CD116C5243915460015B1F2 /* Fortnite Stats.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4CD116DA243915470015B1F2 /* Fortnite StatsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CD116F2243915470015B1F2 /* Build configuration list for PBXNativeTarget "Fortnite StatsTests" */;
+			buildPhases = (
+				4CD116D7243915470015B1F2 /* Sources */,
+				4CD116D8243915470015B1F2 /* Frameworks */,
+				4CD116D9243915470015B1F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4CD116DD243915470015B1F2 /* PBXTargetDependency */,
+			);
+			name = "Fortnite StatsTests";
+			productName = "Fortnite StatsTests";
+			productReference = 4CD116DB243915470015B1F2 /* Fortnite StatsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4CD116E5243915470015B1F2 /* Fortnite StatsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CD116F5243915470015B1F2 /* Build configuration list for PBXNativeTarget "Fortnite StatsUITests" */;
+			buildPhases = (
+				4CD116E2243915470015B1F2 /* Sources */,
+				4CD116E3243915470015B1F2 /* Frameworks */,
+				4CD116E4243915470015B1F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4CD116E8243915470015B1F2 /* PBXTargetDependency */,
+			);
+			name = "Fortnite StatsUITests";
+			productName = "Fortnite StatsUITests";
+			productReference = 4CD116E6243915470015B1F2 /* Fortnite StatsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4CD116BD243915460015B1F2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = Michael;
+				TargetAttributes = {
+					4CD116C4243915460015B1F2 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+					4CD116DA243915470015B1F2 = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = 4CD116C4243915460015B1F2;
+					};
+					4CD116E5243915470015B1F2 = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = 4CD116C4243915460015B1F2;
+					};
+				};
+			};
+			buildConfigurationList = 4CD116C0243915460015B1F2 /* Build configuration list for PBXProject "Fortnite Stats" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4CD116BC243915460015B1F2;
+			productRefGroup = 4CD116C6243915460015B1F2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4CD116C4243915460015B1F2 /* Fortnite Stats */,
+				4CD116DA243915470015B1F2 /* Fortnite StatsTests */,
+				4CD116E5243915470015B1F2 /* Fortnite StatsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4CD116C3243915460015B1F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C6E66A3243E816800DA0E1B /* Montserrat-Light.ttf in Resources */,
+				4C6E66AC243E87C200DA0E1B /* Montserrat-Black.ttf in Resources */,
+				4CD1170B243939490015B1F2 /* BurbankBigCondensed-Black.otf in Resources */,
+				4CD116D5243915470015B1F2 /* LaunchScreen.storyboard in Resources */,
+				4C6E66AA243E877200DA0E1B /* Montserrat-SemiBold.ttf in Resources */,
+				4CD116D2243915470015B1F2 /* Assets.xcassets in Resources */,
+				4C6E66A5243E823B00DA0E1B /* Montserrat-Medium.ttf in Resources */,
+				4CD116D0243915460015B1F2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CD116D9243915470015B1F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CD116E4243915470015B1F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4CD116C1243915460015B1F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C252ADC243F9E0B006FE8D3 /* Ext+CollectionViewDelegate.swift in Sources */,
+				4CEC2AC02443131300D9BC9F /* StatsDetailCollectionViewController.swift in Sources */,
+				4CD117062439223B0015B1F2 /* Coordinator.swift in Sources */,
+				4C252ADA243F9C05006FE8D3 /* StoreAndChallengesViewController.swift in Sources */,
+				4C6E66A8243E834600DA0E1B /* TextField.swift in Sources */,
+				4C38FA2C2444ADC400C665CC /* FeaturedCellLayout.swift in Sources */,
+				4CD11705243922330015B1F2 /* Storyboarded.swift in Sources */,
+				4C5E604C2441BA0F00BA3E59 /* LifeTimeStats.swift in Sources */,
+				4CD11701243919870015B1F2 /* AccountSearchViewController.swift in Sources */,
+				4CEFE1742440047200C7BDFE /* Cache.swift in Sources */,
+				4C5E60522441BA7400BA3E59 /* SquadStats.swift in Sources */,
+				4C5E604E2441BA5A00BA3E59 /* SoloStats.swift in Sources */,
+				4CD11709243932C60015B1F2 /* StatsController.swift in Sources */,
+				4CEFE16D243FF76700C7BDFE /* StoreCollectionViewController.swift in Sources */,
+				4CD1171324394C110015B1F2 /* PlayerStats.swift in Sources */,
+				4C252ADE243F9EA6006FE8D3 /* Ext+CollectionViewDataSource.swift in Sources */,
+				4C252AD8243F89FA006FE8D3 /* StoreItem.swift in Sources */,
+				4CEFE1722440036A00C7BDFE /* StoreItemPhotoOperation.swift in Sources */,
+				4CD116FE243917020015B1F2 /* MainCoordinator.swift in Sources */,
+				4CD1170324391B0A0015B1F2 /* StatsDetailViewController.swift in Sources */,
+				4C252AE1243FA014006FE8D3 /* StoreCollectionViewCell.swift in Sources */,
+				4CD116C9243915460015B1F2 /* AppDelegate.swift in Sources */,
+				4CD116CB243915460015B1F2 /* SceneDelegate.swift in Sources */,
+				4C5E60542441DBF500BA3E59 /* Stats.swift in Sources */,
+				4C5E60502441BA6500BA3E59 /* DuoStats.swift in Sources */,
+				4CEFE1702440032300C7BDFE /* ConcurrentOperations.swift in Sources */,
+				4CD1170E243943C40015B1F2 /* Constants.swift in Sources */,
+				4CEC2ABE2442FCA800D9BC9F /* StatsDetailCollectionViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CD116D7243915470015B1F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CD116E0243915470015B1F2 /* Fortnite_StatsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CD116E2243915470015B1F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CD116EB243915470015B1F2 /* Fortnite_StatsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4CD116DD243915470015B1F2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4CD116C4243915460015B1F2 /* Fortnite Stats */;
+			targetProxy = 4CD116DC243915470015B1F2 /* PBXContainerItemProxy */;
+		};
+		4CD116E8243915470015B1F2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4CD116C4243915460015B1F2 /* Fortnite Stats */;
+			targetProxy = 4CD116E7243915470015B1F2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4CD116CE243915460015B1F2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4CD116CF243915460015B1F2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4CD116D3243915470015B1F2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4CD116D4243915470015B1F2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4CD116ED243915470015B1F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4CD116EE243915470015B1F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4CD116F0243915470015B1F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V5X7HQSSM6;
+				INFOPLIST_FILE = "Fortnite Stats/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.MichaelMcGrath.Fortnite-Stats";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4CD116F1243915470015B1F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V5X7HQSSM6;
+				INFOPLIST_FILE = "Fortnite Stats/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.MichaelMcGrath.Fortnite-Stats";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4CD116F3243915470015B1F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V5X7HQSSM6;
+				INFOPLIST_FILE = "Fortnite StatsTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.MichaelMcGrath.Fortnite-StatsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fortnite Stats.app/Fortnite Stats";
+			};
+			name = Debug;
+		};
+		4CD116F4243915470015B1F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V5X7HQSSM6;
+				INFOPLIST_FILE = "Fortnite StatsTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.MichaelMcGrath.Fortnite-StatsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fortnite Stats.app/Fortnite Stats";
+			};
+			name = Release;
+		};
+		4CD116F6243915470015B1F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V5X7HQSSM6;
+				INFOPLIST_FILE = "Fortnite StatsUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.MichaelMcGrath.Fortnite-StatsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Fortnite Stats";
+			};
+			name = Debug;
+		};
+		4CD116F7243915470015B1F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V5X7HQSSM6;
+				INFOPLIST_FILE = "Fortnite StatsUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.MichaelMcGrath.Fortnite-StatsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Fortnite Stats";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4CD116C0243915460015B1F2 /* Build configuration list for PBXProject "Fortnite Stats" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CD116ED243915470015B1F2 /* Debug */,
+				4CD116EE243915470015B1F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4CD116EF243915470015B1F2 /* Build configuration list for PBXNativeTarget "Fortnite Stats" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CD116F0243915470015B1F2 /* Debug */,
+				4CD116F1243915470015B1F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4CD116F2243915470015B1F2 /* Build configuration list for PBXNativeTarget "Fortnite StatsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CD116F3243915470015B1F2 /* Debug */,
+				4CD116F4243915470015B1F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4CD116F5243915470015B1F2 /* Build configuration list for PBXNativeTarget "Fortnite StatsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CD116F6243915470015B1F2 /* Debug */,
+				4CD116F7243915470015B1F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4CD116BD243915460015B1F2 /* Project object */;
+}
