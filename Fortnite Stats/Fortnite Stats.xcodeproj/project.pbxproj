@@ -162,6 +162,15 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		4CA7D31E2445462C009DE42C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4C252ADB243F9E0B006FE8D3 /* Ext+CollectionViewDelegate.swift */,
+				4C252ADD243F9EA6006FE8D3 /* Ext+CollectionViewDataSource.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		4CD116BC243915460015B1F2 = {
 			isa = PBXGroup;
 			children = (
@@ -202,8 +211,7 @@
 				4CD116D1243915470015B1F2 /* Assets.xcassets */,
 				4CD116D3243915470015B1F2 /* LaunchScreen.storyboard */,
 				4CD116D6243915470015B1F2 /* Info.plist */,
-				4C252ADB243F9E0B006FE8D3 /* Ext+CollectionViewDelegate.swift */,
-				4C252ADD243F9EA6006FE8D3 /* Ext+CollectionViewDataSource.swift */,
+				4CA7D31E2445462C009DE42C /* Extensions */,
 			);
 			path = "Fortnite Stats";
 			sourceTree = "<group>";

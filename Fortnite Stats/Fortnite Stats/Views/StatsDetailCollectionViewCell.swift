@@ -62,6 +62,23 @@ class StatsDetailCollectionViewCell: UICollectionViewCell {
         let scale = max(delta, 0.5)
         gameModeLabel.transform = CGAffineTransform(scaleX: scale, y: scale)
         
+        winsDescriptionLabel.transform = CGAffineTransform(scaleX: scale, y: scale)
+        totalWinsLabel.transform = CGAffineTransform(scaleX: scale, y: scale)
+        winRatioDescriptionLabel.transform = CGAffineTransform(scaleX: scale, y: scale)
+        winRatioLabel.transform = CGAffineTransform(scaleX: scale, y: scale)
+        totalKillsDescriptionLabel.transform = CGAffineTransform(scaleX: scale, y: scale)
+        totalKillsLabel.transform = CGAffineTransform(scaleX: scale, y: scale)
+        kdDescriptionLabel.transform = CGAffineTransform(scaleX: scale, y: scale)
+        kdLabel.transform = CGAffineTransform(scaleX: scale, y: scale)
+        totalMatchesDescriptionLabel.transform = CGAffineTransform(scaleX: scale, y: scale)
+        totalMatchesLabel.transform = CGAffineTransform(scaleX: scale, y: scale)
+        kpgDescriptionLabel.transform = CGAffineTransform(scaleX: scale, y: scale)
+        kpgLabel.transform = CGAffineTransform(scaleX: scale, y: scale)
+        top3DescriptionLabel.transform = CGAffineTransform(scaleX: scale, y: scale)
+        top3Label.transform = CGAffineTransform(scaleX: scale, y: scale)
+        top6DescriptionLabel.transform = CGAffineTransform(scaleX: scale, y: scale)
+        top6Label.transform = CGAffineTransform(scaleX: scale, y: scale)
+        
         winsDescriptionLabel.alpha = delta
         totalWinsLabel.alpha = delta
         winRatioDescriptionLabel.alpha = delta
@@ -140,9 +157,9 @@ class StatsDetailCollectionViewCell: UICollectionViewCell {
         case .none:
             break
         }
-        imageView.layer.cornerRadius = 5
-        imageCoverView.layer.cornerRadius = 5
-        self.layer.cornerRadius = 5
+//        imageView.layer.cornerRadius = 5
+//        imageCoverView.layer.cornerRadius = 5
+//        self.layer.cornerRadius = 5
         self.layer.shadowColor = UIColor.black.cgColor
         self.layer.borderWidth = 3
         self.layer.shadowOffset = CGSize(width: 2.0, height: 4.0)
