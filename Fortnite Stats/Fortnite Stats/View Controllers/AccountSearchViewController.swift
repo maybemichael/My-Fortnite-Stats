@@ -19,9 +19,6 @@ class AccountSearchViewController: UIViewController, Storyboarded, UITextFieldDe
         }
     }
     
-    @IBOutlet weak var xboxPlatformButton: UIButton!
-    @IBOutlet weak var psnPlatformButton: UIButton!
-    @IBOutlet weak var pcPlatformButton: UIButton!
     @IBOutlet weak var underlineView: UIView!
     @IBOutlet weak var totalWinsLabel: UILabel!
     @IBOutlet weak var matchesPlayedLabel: UILabel!
@@ -37,23 +34,22 @@ class AccountSearchViewController: UIViewController, Storyboarded, UITextFieldDe
     @IBOutlet weak var accountDescriptionLabel: UILabel!
     @IBOutlet weak var platformDescriptionLabel: UILabel!
     @IBOutlet weak var moreStatsButton: UIButton!
-    @IBOutlet weak var searchButton2: UIButton!
+    @IBOutlet weak var platformControl: UISegmentedControl!
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        appLaunch()
+        launchSetupViews()
     }
     
-    func appLaunch() {
+    func launchSetupViews() {
         searchTextField.delegate = self
         underlineView.layer.cornerRadius = 40
         searchTextField.attributedPlaceholder = NSAttributedString(string: "Enter Account Name:", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         searchTextField.textColor = UIColor.white
         searchTextField.font = UIFont(name: "Montserrat-Medium", size: 17.0)
-        pcPlatformButton.setImage(UIImage(named: "Epic Games Selected"), for: .normal)
         let searchButton = UIButton()
         searchButton.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(searchButton)
@@ -63,6 +59,16 @@ class AccountSearchViewController: UIViewController, Storyboarded, UITextFieldDe
         searchTextField.rightViewMode = .always
         searchTextField.translatesAutoresizingMaskIntoConstraints = false
         searchButton.addTarget(self, action: #selector(searchButtonTapped), for: .touchUpInside)
+        moreStatsButton.layer.cornerRadius = 8
+        moreStatsButton.layer.borderWidth = 2.0
+        platformControl.translatesAutoresizingMaskIntoConstraints = false
+        platformControl.layer.shadowColor = UIColor.black.cgColor
+        platformControl.layer.shadowRadius = 2
+        platformControl.layer.shadowOpacity = 0.5
+        platformControl.setImage(UIImage(named: "Epic Games Icon"), forSegmentAt: 0)
+//        platformControl.selectedSegmentTintColor = #colorLiteral(red: 0, green: 0.1154924706, blue: 0.193021059, alpha: 1)
+        platformControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : #colorLiteral(red: 0, green: 0.1154924706, blue: 0.193021059, alpha: 1)], for: .normal)
+        
     }
     
     func updateViews() {
@@ -96,36 +102,37 @@ class AccountSearchViewController: UIViewController, Storyboarded, UITextFieldDe
     }
 
     func platformSelected() {
-        switch platform {
-        case .pc:
-            pcPlatformButton.setImage(UIImage(named: "Epic Games Selected"), for: .normal)
-            psnPlatformButton.setImage(UIImage(named: "PSN Icon"), for: .normal)
-            xboxPlatformButton.setImage(UIImage(named: "Xbox Icon"), for: .normal)
-            
-            pcPlatformButton.setTitleColor(#colorLiteral(red: 1, green: 0.9471729398, blue: 0.3208206296, alpha: 1), for: .normal)
-            psnPlatformButton.setTitleColor(#colorLiteral(red: 0, green: 0.1154924706, blue: 0.193021059, alpha: 1), for: .normal)
-            xboxPlatformButton.setTitleColor(#colorLiteral(red: 0, green: 0.1154924706, blue: 0.193021059, alpha: 1), for: .normal)
-        case .psn:
-            pcPlatformButton.setImage(UIImage(named: "Epic Games Icon"), for: .normal)
-            psnPlatformButton.setImage(UIImage(named: "PSN Selected"), for: .normal)
-            xboxPlatformButton.setImage(UIImage(named: "Xbox Icon"), for: .normal)
-            
-            pcPlatformButton.setTitleColor(#colorLiteral(red: 0, green: 0.1154924706, blue: 0.193021059, alpha: 1), for: .normal)
-            psnPlatformButton.setTitleColor(#colorLiteral(red: 1, green: 0.9471729398, blue: 0.3208206296, alpha: 1), for: .normal)
-            xboxPlatformButton.setTitleColor(#colorLiteral(red: 0, green: 0.1154924706, blue: 0.193021059, alpha: 1), for: .normal)
-        case .xbox:
-            pcPlatformButton.setImage(UIImage(named: "Epic Games Icon"), for: .normal)
-            psnPlatformButton.setImage(UIImage(named: "PSN Icon"), for: .normal)
-            xboxPlatformButton.setImage(UIImage(named: "Xbox Selected"), for: .normal)
-            
-            pcPlatformButton.setTitleColor(#colorLiteral(red: 0, green: 0.1154924706, blue: 0.193021059, alpha: 1), for: .normal)
-            psnPlatformButton.setTitleColor(#colorLiteral(red: 0, green: 0.1154924706, blue: 0.193021059, alpha: 1), for: .normal)
-            xboxPlatformButton.setTitleColor(#colorLiteral(red: 1, green: 0.9471729398, blue: 0.3208206296, alpha: 1), for: .normal)
-        }
+//        switch platform {
+//        case .pc:
+//            pcPlatformButton.setImage(UIImage(named: "Epic Games Selected"), for: .normal)
+//            psnPlatformButton.setImage(UIImage(named: "PSN Icon"), for: .normal)
+//            xboxPlatformButton.setImage(UIImage(named: "Xbox Icon"), for: .normal)
+//
+//            pcPlatformButton.setTitleColor(#colorLiteral(red: 1, green: 0.9471729398, blue: 0.3208206296, alpha: 1), for: .normal)
+//            psnPlatformButton.setTitleColor(#colorLiteral(red: 0, green: 0.1154924706, blue: 0.193021059, alpha: 1), for: .normal)
+//            xboxPlatformButton.setTitleColor(#colorLiteral(red: 0, green: 0.1154924706, blue: 0.193021059, alpha: 1), for: .normal)
+//        case .psn:
+//            pcPlatformButton.setImage(UIImage(named: "Epic Games Icon"), for: .normal)
+//            psnPlatformButton.setImage(UIImage(named: "PSN Selected"), for: .normal)
+//            xboxPlatformButton.setImage(UIImage(named: "Xbox Icon"), for: .normal)
+//
+//            pcPlatformButton.setTitleColor(#colorLiteral(red: 0, green: 0.1154924706, blue: 0.193021059, alpha: 1), for: .normal)
+//            psnPlatformButton.setTitleColor(#colorLiteral(red: 1, green: 0.9471729398, blue: 0.3208206296, alpha: 1), for: .normal)
+//            xboxPlatformButton.setTitleColor(#colorLiteral(red: 0, green: 0.1154924706, blue: 0.193021059, alpha: 1), for: .normal)
+//        case .xbox:
+//            pcPlatformButton.setImage(UIImage(named: "Epic Games Icon"), for: .normal)
+//            psnPlatformButton.setImage(UIImage(named: "PSN Icon"), for: .normal)
+//            xboxPlatformButton.setImage(UIImage(named: "Xbox Selected"), for: .normal)
+//
+//            pcPlatformButton.setTitleColor(#colorLiteral(red: 0, green: 0.1154924706, blue: 0.193021059, alpha: 1), for: .normal)
+//            psnPlatformButton.setTitleColor(#colorLiteral(red: 0, green: 0.1154924706, blue: 0.193021059, alpha: 1), for: .normal)
+//            xboxPlatformButton.setTitleColor(#colorLiteral(red: 1, green: 0.9471729398, blue: 0.3208206296, alpha: 1), for: .normal)
+//        }
     }
     
     @objc func searchButtonTapped() {
         searchTextField.resignFirstResponder()
+        platformSelected()
         guard let searched = searchTextField.text, !searched.isEmpty else { return }
         statsController.getStats(platform: platform, accountID: searched) { (_, searchedStats) in
             self.searchedPlayer = searchedStats
@@ -138,26 +145,26 @@ class AccountSearchViewController: UIViewController, Storyboarded, UITextFieldDe
     
     // MARK: IB Actions
     
-    @IBAction func pcButtonTapped(_ sender: Any) {
-        platform = .pc
-        platformSelected()
+    @IBAction func platformSelected(_ sender: Any) {
+        switch platformControl.selectedSegmentIndex {
+        case 0:
+            platform = .pc
+        case 1:
+            platform = .psn
+        case 2:
+            platform = .xbox
+        default:
+            platform = .pc
+        }
     }
     
-    @IBAction func psnButtonTapped(_ sender: Any) {
-        platform = .psn
-        platformSelected()
-    }
-    
-    @IBAction func xboxButtonTapped(_ sender: Any) {
-        platform = .xbox
-        platformSelected()
-    }
     
     
     // MARK: Text Field Delegate Methods
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         searchTextField.resignFirstResponder()
+        platformSelected()
         guard let searched = searchTextField.text, !searched.isEmpty else { return false }
         statsController.getStats(platform: platform, accountID: searched) { (_, searchedStats) in
             self.searchedPlayer = searchedStats
