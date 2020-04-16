@@ -22,25 +22,6 @@ struct PlayerStats: Codable {
         case stats
         case lifeTimeStats
     }
-    
-//    init(from decoder: Decoder) throws {
-//        let container = try decoder.container(keyedBy: PlayerKeys.self)
-//
-//        var lifeTimeStatsArray = [LifeTimeStats]()
-//        if container.contains(.lifeTimeStats) {
-//            var lifeTimeStatsContainer = try container.nestedUnkeyedContainer(forKey: .lifeTimeStats)
-//
-//            while lifeTimeStatsContainer.isAtEnd == false {
-//                let stats = try lifeTimeStatsContainer.decode(LifeTimeStats.self)
-//                lifeTimeStatsArray.append(stats)
-//            }
-//        }
-//
-//        userName = try container.decode(String.self, forKey: .userName)
-//        platformName = try container.decode(String.self, forKey: .platformName)
-//        accountID = try container.decode(String.self, forKey: .accountID)
-//        lifeTimeStats = lifeTimeStatsArray
-//    }
 }
 
 

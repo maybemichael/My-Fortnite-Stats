@@ -115,9 +115,6 @@ class StatsController {
                 print(json)
                 let fetchedStore = try JSONDecoder().decode([StoreItem].self, from: data)
                 self.currentStore = fetchedStore
-                print("This is the count of the store items: \(self.currentStore?.count)")
-                print(self.currentStore?[1].imageURL)
-                print(self.currentStore?.first?.vBucks)
                 DispatchQueue.main.async {
                     completion(fetchedStore)
                 }

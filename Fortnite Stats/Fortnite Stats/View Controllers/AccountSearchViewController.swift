@@ -36,8 +36,6 @@ class AccountSearchViewController: UIViewController, Storyboarded, UITextFieldDe
     @IBOutlet weak var moreStatsButton: UIButton!
     @IBOutlet weak var platformControl: UISegmentedControl!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -47,7 +45,7 @@ class AccountSearchViewController: UIViewController, Storyboarded, UITextFieldDe
     func launchSetupViews() {
         searchTextField.delegate = self
         underlineView.layer.cornerRadius = 40
-        searchTextField.attributedPlaceholder = NSAttributedString(string: "Enter Account Name:", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        searchTextField.attributedPlaceholder = NSAttributedString(string: "Enter Epic Account ID:", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         searchTextField.textColor = UIColor.white
         searchTextField.font = UIFont(name: "Montserrat-Medium", size: 17.0)
         let searchButton = UIButton()
@@ -66,9 +64,13 @@ class AccountSearchViewController: UIViewController, Storyboarded, UITextFieldDe
         platformControl.layer.shadowRadius = 2
         platformControl.layer.shadowOpacity = 0.5
         platformControl.setImage(UIImage(named: "Epic Games Icon"), forSegmentAt: 0)
-//        platformControl.selectedSegmentTintColor = #colorLiteral(red: 0, green: 0.1154924706, blue: 0.193021059, alpha: 1)
         platformControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : #colorLiteral(red: 0, green: 0.1154924706, blue: 0.193021059, alpha: 1)], for: .normal)
-        
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+        searchTextField.resignFirstResponder()
     }
     
     func updateViews() {
@@ -101,38 +103,9 @@ class AccountSearchViewController: UIViewController, Storyboarded, UITextFieldDe
         }
     }
 
-    func platformSelected() {
-//        switch platform {
-//        case .pc:
-//            pcPlatformButton.setImage(UIImage(named: "Epic Games Selected"), for: .normal)
-//            psnPlatformButton.setImage(UIImage(named: "PSN Icon"), for: .normal)
-//            xboxPlatformButton.setImage(UIImage(named: "Xbox Icon"), for: .normal)
-//
-//            pcPlatformButton.setTitleColor(#colorLiteral(red: 1, green: 0.9471729398, blue: 0.3208206296, alpha: 1), for: .normal)
-//            psnPlatformButton.setTitleColor(#colorLiteral(red: 0, green: 0.1154924706, blue: 0.193021059, alpha: 1), for: .normal)
-//            xboxPlatformButton.setTitleColor(#colorLiteral(red: 0, green: 0.1154924706, blue: 0.193021059, alpha: 1), for: .normal)
-//        case .psn:
-//            pcPlatformButton.setImage(UIImage(named: "Epic Games Icon"), for: .normal)
-//            psnPlatformButton.setImage(UIImage(named: "PSN Selected"), for: .normal)
-//            xboxPlatformButton.setImage(UIImage(named: "Xbox Icon"), for: .normal)
-//
-//            pcPlatformButton.setTitleColor(#colorLiteral(red: 0, green: 0.1154924706, blue: 0.193021059, alpha: 1), for: .normal)
-//            psnPlatformButton.setTitleColor(#colorLiteral(red: 1, green: 0.9471729398, blue: 0.3208206296, alpha: 1), for: .normal)
-//            xboxPlatformButton.setTitleColor(#colorLiteral(red: 0, green: 0.1154924706, blue: 0.193021059, alpha: 1), for: .normal)
-//        case .xbox:
-//            pcPlatformButton.setImage(UIImage(named: "Epic Games Icon"), for: .normal)
-//            psnPlatformButton.setImage(UIImage(named: "PSN Icon"), for: .normal)
-//            xboxPlatformButton.setImage(UIImage(named: "Xbox Selected"), for: .normal)
-//
-//            pcPlatformButton.setTitleColor(#colorLiteral(red: 0, green: 0.1154924706, blue: 0.193021059, alpha: 1), for: .normal)
-//            psnPlatformButton.setTitleColor(#colorLiteral(red: 0, green: 0.1154924706, blue: 0.193021059, alpha: 1), for: .normal)
-//            xboxPlatformButton.setTitleColor(#colorLiteral(red: 1, green: 0.9471729398, blue: 0.3208206296, alpha: 1), for: .normal)
-//        }
-    }
-    
     @objc func searchButtonTapped() {
         searchTextField.resignFirstResponder()
-        platformSelected()
+        platformSelected(self)
         guard let searched = searchTextField.text, !searched.isEmpty else { return }
         statsController.getStats(platform: platform, accountID: searched) { (_, searchedStats) in
             self.searchedPlayer = searchedStats
@@ -149,12 +122,16 @@ class AccountSearchViewController: UIViewController, Storyboarded, UITextFieldDe
         switch platformControl.selectedSegmentIndex {
         case 0:
             platform = .pc
+            searchTextField.attributedPlaceholder = NSAttributedString(string: "Enter Epic Account ID:", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         case 1:
             platform = .psn
+            searchTextField.attributedPlaceholder = NSAttributedString(string: "Enter Playstation ID:", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         case 2:
             platform = .xbox
+            searchTextField.attributedPlaceholder = NSAttributedString(string: "Enter Xbox Gamertag:", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         default:
             platform = .pc
+            searchTextField.attributedPlaceholder = NSAttributedString(string: "Enter Epic Account ID:", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         }
     }
     
@@ -164,7 +141,7 @@ class AccountSearchViewController: UIViewController, Storyboarded, UITextFieldDe
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         searchTextField.resignFirstResponder()
-        platformSelected()
+        platformSelected(self)
         guard let searched = searchTextField.text, !searched.isEmpty else { return false }
         statsController.getStats(platform: platform, accountID: searched) { (_, searchedStats) in
             self.searchedPlayer = searchedStats
@@ -175,6 +152,8 @@ class AccountSearchViewController: UIViewController, Storyboarded, UITextFieldDe
         }
         return true
     }
+    
+    // MARK: Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "StatsDetailSegue" {

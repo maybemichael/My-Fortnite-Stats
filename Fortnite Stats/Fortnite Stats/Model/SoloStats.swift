@@ -16,35 +16,22 @@ struct SoloStats: Codable {
     let matches: String
     let killsPerGame: String
     
-   
-//    enum StatsKeys: String, CodingKey {
-//        case stats
+    enum SoloStatsKeys: String, CodingKey {
+        case wins = "top1"
+        case kills
+        case winRatio
+        case killDeathRatio = "kd"
+        case matches
+        case killsPerGame = "kpg"
         
-//    enum P2Keys: String, CodingKey {
-//        case p2
-        
-        enum SoloStatsKeys: String, CodingKey {
-            case wins = "top1"
-            case kills
-            case winRatio
-            case killDeathRatio = "kd"
-            case matches
-            case killsPerGame = "kpg"
-            
-            enum DisplayKeys: String, CodingKey {
-                case displayValue
-            }
+        enum DisplayKeys: String, CodingKey {
+            case displayValue
         }
-//    }
-//    }
-    
+    }
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: SoloStatsKeys.self)
         
-        
-//        let statsContainer = try container.nestedContainer(keyedBy: StatsKeys.P2Keys.self, forKey: .stats)
-//        let solosContainer = try container.nestedContainer(keyedBy: P2Keys.SoloStatsKeys.self, forKey: .p2)
         let kdContainer = try container.nestedContainer(keyedBy: SoloStatsKeys.DisplayKeys.self, forKey: .killDeathRatio)
         killDeathRatio = try kdContainer.decode(String.self, forKey: .displayValue)
         let top1Container = try container.nestedContainer(keyedBy: SoloStatsKeys.DisplayKeys.self, forKey: .wins)

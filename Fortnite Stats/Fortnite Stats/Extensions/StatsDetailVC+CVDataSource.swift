@@ -9,7 +9,6 @@
 import UIKit
 
 extension StatsDetailViewController: UICollectionViewDataSource {
-    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -20,7 +19,6 @@ extension StatsDetailViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StatsDetailCell", for: indexPath) as? StatsDetailCollectionViewCell else { return UICollectionViewCell() }
-        
         
         let player = statsController?.playerStats
         cell.player = player
@@ -40,6 +38,4 @@ extension StatsDetailViewController: UICollectionViewDataSource {
         
         return cell
     }
-    
-    
 }

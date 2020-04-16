@@ -16,7 +16,6 @@ struct SquadStats: Codable {
     let matches: String
     let killsPerGame: String
     
-    
     enum SquadStatsKeys: String, CodingKey {
         case wins = "top1"
         case kills
@@ -33,9 +32,6 @@ struct SquadStats: Codable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: SquadStatsKeys.self)
         
-        
-        //        let statsContainer = try container.nestedContainer(keyedBy: StatsKeys.P2Keys.self, forKey: .stats)
-        //        let solosContainer = try container.nestedContainer(keyedBy: P2Keys.SoloStatsKeys.self, forKey: .p2)
         let kdContainer = try container.nestedContainer(keyedBy: SquadStatsKeys.DisplayKeys.self, forKey: .killDeathRatio)
         killDeathRatio = try kdContainer.decode(String.self, forKey: .displayValue)
         let top1Container = try container.nestedContainer(keyedBy: SquadStatsKeys.DisplayKeys.self, forKey: .wins)

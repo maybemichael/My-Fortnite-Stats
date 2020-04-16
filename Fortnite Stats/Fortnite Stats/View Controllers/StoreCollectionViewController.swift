@@ -17,32 +17,39 @@ class StoreCollectionViewController: UICollectionViewController {
     let photoFetchQueue = OperationQueue()
     var operations = [String : Operation]()
     
+    let storeDetailView = UIView()
+    let detailImageView = UIImageView()
+    let itemNameLabel = UILabel()
+    let vBucksImageView = UIImageView()
+    let vBucksLabel = UILabel()
+    
+    
+    @IBOutlet weak var itemDetailView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-//        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
         statsController.getCurrentStore { _ in
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
+                self.setupItemDetailView()
+                self.storeDetailView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.hideItemDetailView)))
             }
         }
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+        if storeDetailView.isHidden == false {
+            storeDetailView.isHidden = true
+        }
     }
-    */
-
+    
+    @objc func hideItemDetailView() {
+        storeDetailView.isHidden = true
+    }
+    
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -60,22 +67,10 @@ class StoreCollectionViewController: UICollectionViewController {
         let item = statsController.currentStore?[indexPath.item]
         cell.item = item
         loadImage(forCell: cell, forItemAt: indexPath)
-    
-//        cell.contentView.layer.cornerRadius = 4.0
-//        cell.contentView.layer.borderWidth = 1.0
-//        cell.contentView.layer.borderColor = UIColor.clear.cgColor
-//        cell.contentView.layer.masksToBounds = false
-//        cell.layer.shadowColor = UIColor.black.cgColor
-//        cell.layer.shadowOffset = CGSize(width: 0, height: 1.0)
-//        cell.layer.shadowRadius = 4.0
-//        cell.layer.shadowOpacity = 1.0
-//        cell.layer.masksToBounds = false
-//        cell.layer.cornerRadius = 8
-//        cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
+
         return cell
     }
 
-    
     // MARK: Image Cache
     
     private func loadImage(forCell cell: StoreCollectionViewCell, forItemAt indexPath: IndexPath) {
@@ -118,8 +113,89 @@ class StoreCollectionViewController: UICollectionViewController {
         operations[shopItem.name] = fetchOp
     }
     
+    func setupItemDetailView() {
+        storeDetailView.translatesAutoresizingMaskIntoConstraints = false
+        detailImageView.translatesAutoresizingMaskIntoConstraints = false
+        itemNameLabel.translatesAutoresizingMaskIntoConstraints = false
+        vBucksImageView.translatesAutoresizingMaskIntoConstraints = false
+        vBucksLabel.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(storeDetailView)
+        storeDetailView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor).isActive = true
+        storeDetailView.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor).isActive = true
+        storeDetailView.widthAnchor.constraint(equalToConstant: view.bounds.width - 80).isActive = true
+        storeDetailView.heightAnchor.constraint(equalToConstant: view.bounds.height / 2).isActive = true
+        storeDetailView.backgroundColor = #colorLiteral(red: 0, green: 0.1154924706, blue: 0.193021059, alpha: 1)
+        
+        storeDetailView.addSubview(itemNameLabel)
+        storeDetailView.addSubview(detailImageView)
+        storeDetailView.addSubview(vBucksLabel)
+        storeDetailView.addSubview(vBucksImageView)
+        vBucksLabel.textAlignment = .center
+        vBucksLabel.font = UIFont(name: "BurbankBigCondensed-Black", size: 40)
+        vBucksLabel.textColor = #colorLiteral(red: 1, green: 0.9471729398, blue: 0.3208206296, alpha: 1)
+        vBucksLabel.textAlignment = .center
+        
+        vBucksImageView.image = UIImage(named: "VBuck")
+        vBucksImageView.layer.cornerRadius = vBucksImageView.frame.height / 2
+        vBucksImageView.layer.masksToBounds = false
+        vBucksImageView.clipsToBounds = true
+        vBucksImageView.contentMode = .scaleAspectFit
+        vBucksImageView.backgroundColor = #colorLiteral(red: 0, green: 0.1154924706, blue: 0.193021059, alpha: 1)
+        
+        vBucksLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        vBucksImageView.heightAnchor.constraint(equalTo: vBucksLabel.heightAnchor).isActive = true
+        vBucksImageView.widthAnchor.constraint(equalTo: vBucksImageView.heightAnchor).isActive = true
+        let vBucksStackView = UIStackView(arrangedSubviews: [vBucksImageView, vBucksLabel])
+        storeDetailView.addSubview(vBucksStackView)
+        vBucksStackView.translatesAutoresizingMaskIntoConstraints = false
+        vBucksStackView.axis = .horizontal
+        vBucksStackView.centerXAnchor.constraint(equalTo: storeDetailView.centerXAnchor).isActive = true
+        vBucksStackView.backgroundColor = #colorLiteral(red: 0, green: 0.1154924706, blue: 0.193021059, alpha: 1)
+        
+        detailImageView.leadingAnchor.constraint(equalTo: storeDetailView.leadingAnchor, constant: 20).isActive = true
+        detailImageView.trailingAnchor.constraint(equalTo: storeDetailView.trailingAnchor, constant: -20).isActive = true
+        detailImageView.topAnchor.constraint(equalTo: storeDetailView.topAnchor, constant: 80).isActive = true
+        detailImageView.bottomAnchor.constraint(equalTo: storeDetailView.bottomAnchor, constant: -100).isActive = true
+        
+        
+        itemNameLabel.bottomAnchor.constraint(equalTo: detailImageView.topAnchor, constant: -8).isActive = true
+        itemNameLabel.leadingAnchor.constraint(equalTo: storeDetailView.leadingAnchor, constant: 40).isActive = true
+        itemNameLabel.trailingAnchor.constraint(equalTo: storeDetailView.trailingAnchor, constant: -40).isActive = true
+        itemNameLabel.text = "Name"
+        itemNameLabel.textAlignment = .center
+        itemNameLabel.font = UIFont(name: "BurbankBigCondensed-Black", size: 40)
+        itemNameLabel.textColor = #colorLiteral(red: 1, green: 0.9471729398, blue: 0.3208206296, alpha: 1)
+
+        vBucksStackView.topAnchor.constraint(equalTo: detailImageView.bottomAnchor, constant: 20).isActive = true
+        vBucksStackView.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        vBucksStackView.widthAnchor.constraint(equalTo: detailImageView.widthAnchor, multiplier: 0.5).isActive = true
+        vBucksImageView.layer.cornerRadius = 25
+        
+        storeDetailView.isHidden = true
+        storeDetailView.layer.cornerRadius = 8
+        storeDetailView.layer.shadowColor = UIColor.black.cgColor
+        storeDetailView.layer.borderWidth = 1.0
+        storeDetailView.layer.shadowOffset = CGSize(width: 0, height: 2.0)
+        storeDetailView.layer.shadowRadius = 8
+        storeDetailView.layer.shadowOpacity = 1.0
+        storeDetailView.layer.masksToBounds = false
+    }
+    
     // MARK: UICollectionViewDelegate
 
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        storeDetailView.isHidden = false
+        guard
+            let item = statsController.currentStore?[indexPath.item],
+            let data = try? Data(contentsOf: item.imageURL)
+            else { return }
+        itemNameLabel.text = item.name
+        vBucksLabel.text = "\(item.vBucks)"
+        DispatchQueue.main.async {
+            self.detailImageView.image = UIImage(data: data)
+        }
+    }
+    
     /*
     // Uncomment this method to specify if the specified item should be highlighted during tracking
     override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
