@@ -32,6 +32,7 @@ class StatsDetailViewController: UIViewController, Storyboarded {
         collectionView.dataSource = self
         
         updateViews()
+        
     }
     
     func updateViews() {

@@ -13,6 +13,7 @@
 		4C252ADE243F9EA6006FE8D3 /* StatsDetailVC+CVDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C252ADD243F9EA6006FE8D3 /* StatsDetailVC+CVDataSource.swift */; };
 		4C252AE1243FA014006FE8D3 /* StoreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C252AE0243FA014006FE8D3 /* StoreCollectionViewCell.swift */; };
 		4C38FA2C2444ADC400C665CC /* FeaturedCellLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C38FA2B2444ADC400C665CC /* FeaturedCellLayout.swift */; };
+		4C3B17B4244A260400E48369 /* UIView+ProgrammaticConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B17B3244A260400E48369 /* UIView+ProgrammaticConstraints.swift */; };
 		4C44979E2447E190003B3BE9 /* StatsDetailVC+ChartsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C44979D2447E190003B3BE9 /* StatsDetailVC+ChartsDelegate.swift */; };
 		4C5E604C2441BA0F00BA3E59 /* LifeTimeStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5E604B2441BA0F00BA3E59 /* LifeTimeStats.swift */; };
 		4C5E604E2441BA5A00BA3E59 /* SoloStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5E604D2441BA5A00BA3E59 /* SoloStats.swift */; };
@@ -75,6 +76,7 @@
 		4C252ADD243F9EA6006FE8D3 /* StatsDetailVC+CVDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatsDetailVC+CVDataSource.swift"; sourceTree = "<group>"; };
 		4C252AE0243FA014006FE8D3 /* StoreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCollectionViewCell.swift; sourceTree = "<group>"; };
 		4C38FA2B2444ADC400C665CC /* FeaturedCellLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCellLayout.swift; sourceTree = "<group>"; };
+		4C3B17B3244A260400E48369 /* UIView+ProgrammaticConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ProgrammaticConstraints.swift"; sourceTree = "<group>"; };
 		4C44979D2447E190003B3BE9 /* StatsDetailVC+ChartsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatsDetailVC+ChartsDelegate.swift"; sourceTree = "<group>"; };
 		4C5E604B2441BA0F00BA3E59 /* LifeTimeStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeTimeStats.swift; sourceTree = "<group>"; };
 		4C5E604D2441BA5A00BA3E59 /* SoloStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoloStats.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				4C252ADB243F9E0B006FE8D3 /* StatsDetailVC+CVDelegate.swift */,
 				4C252ADD243F9EA6006FE8D3 /* StatsDetailVC+CVDataSource.swift */,
 				4C44979D2447E190003B3BE9 /* StatsDetailVC+ChartsDelegate.swift */,
+				4C3B17B3244A260400E48369 /* UIView+ProgrammaticConstraints.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -641,6 +644,7 @@
 				4C5E60502441BA6500BA3E59 /* DuoStats.swift in Sources */,
 				4CEFE1702440032300C7BDFE /* ConcurrentOperations.swift in Sources */,
 				4CD1170E243943C40015B1F2 /* Constants.swift in Sources */,
+				4C3B17B4244A260400E48369 /* UIView+ProgrammaticConstraints.swift in Sources */,
 				4CEC2ABE2442FCA800D9BC9F /* StatsDetailCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

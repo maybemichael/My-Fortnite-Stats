@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UITextField {
+extension UIView {
     func useUnderline() {
         let border = CALayer()
         let borderWidth = CGFloat(4.0)
