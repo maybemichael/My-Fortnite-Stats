@@ -245,7 +245,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1057" y="-298"/>
+            <point key="canvasLocation" x="1120" y="-482"/>
         </scene>
         <!--Stats Detail View Controller-->
         <scene sceneID="BtU-1a-JVH">
@@ -568,7 +568,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CWX-Jh-aEp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1898.5507246376812" y="-299.33035714285711"/>
+            <point key="canvasLocation" x="2313" y="-325"/>
         </scene>
         <!--Item-->
         <scene sceneID="650-7E-iSv">
@@ -668,7 +668,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3QJ-QG-ix1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2190" y="460"/>
+            <point key="canvasLocation" x="2312" y="469"/>
         </scene>
         <!--Item Shop-->
         <scene sceneID="XDz-xW-Tby">
@@ -762,7 +762,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R5i-8E-yBK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1083" y="541"/>
+            <point key="canvasLocation" x="1255" y="437"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="eSd-cz-zDO">
@@ -783,7 +783,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yOo-kf-428" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
+            <point key="canvasLocation" x="107" y="58"/>
         </scene>
     </scenes>
     <resources>
