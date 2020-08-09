@@ -14,7 +14,6 @@
 		4C252AE1243FA014006FE8D3 /* StoreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C252AE0243FA014006FE8D3 /* StoreCollectionViewCell.swift */; };
 		4C38FA2C2444ADC400C665CC /* FeaturedCellLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C38FA2B2444ADC400C665CC /* FeaturedCellLayout.swift */; };
 		4C3B17B4244A260400E48369 /* UIView+ProgrammaticConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B17B3244A260400E48369 /* UIView+ProgrammaticConstraints.swift */; };
-		4C44979E2447E190003B3BE9 /* StatsDetailVC+ChartsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C44979D2447E190003B3BE9 /* StatsDetailVC+ChartsDelegate.swift */; };
 		4C5E604C2441BA0F00BA3E59 /* LifeTimeStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5E604B2441BA0F00BA3E59 /* LifeTimeStats.swift */; };
 		4C5E604E2441BA5A00BA3E59 /* SoloStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5E604D2441BA5A00BA3E59 /* SoloStats.swift */; };
 		4C5E60502441BA6500BA3E59 /* DuoStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5E604F2441BA6500BA3E59 /* DuoStats.swift */; };
@@ -48,6 +47,7 @@
 		4CEFE1722440036A00C7BDFE /* StoreItemPhotoOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEFE1712440036A00C7BDFE /* StoreItemPhotoOperation.swift */; };
 		4CEFE1742440047200C7BDFE /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEFE1732440047200C7BDFE /* Cache.swift */; };
 		60CF9C4243F8FFB8AD7C2E45 /* Pods_Fortnite_StatsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50DBEFF81DCF0F05800A912E /* Pods_Fortnite_StatsTests.framework */; };
+		9539AAD024DFFCF6005078A4 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9539AACF24DFFCF6005078A4 /* TabBarController.swift */; };
 		F719F471B29F88FB8B5DA914 /* Pods_Fortnite_Stats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E246BFD70442AC493A960957 /* Pods_Fortnite_Stats.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,7 +77,6 @@
 		4C252AE0243FA014006FE8D3 /* StoreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCollectionViewCell.swift; sourceTree = "<group>"; };
 		4C38FA2B2444ADC400C665CC /* FeaturedCellLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCellLayout.swift; sourceTree = "<group>"; };
 		4C3B17B3244A260400E48369 /* UIView+ProgrammaticConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ProgrammaticConstraints.swift"; sourceTree = "<group>"; };
-		4C44979D2447E190003B3BE9 /* StatsDetailVC+ChartsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatsDetailVC+ChartsDelegate.swift"; sourceTree = "<group>"; };
 		4C5E604B2441BA0F00BA3E59 /* LifeTimeStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeTimeStats.swift; sourceTree = "<group>"; };
 		4C5E604D2441BA5A00BA3E59 /* SoloStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoloStats.swift; sourceTree = "<group>"; };
 		4C5E604F2441BA6500BA3E59 /* DuoStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuoStats.swift; sourceTree = "<group>"; };
@@ -119,6 +118,7 @@
 		50DBEFF81DCF0F05800A912E /* Pods_Fortnite_StatsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fortnite_StatsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AA27F176110F4771D43B730 /* Pods-Fortnite Stats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fortnite Stats.release.xcconfig"; path = "Target Support Files/Pods-Fortnite Stats/Pods-Fortnite Stats.release.xcconfig"; sourceTree = "<group>"; };
 		92E198D5E0842537BD9F2777 /* Pods-Fortnite Stats-Fortnite StatsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fortnite Stats-Fortnite StatsUITests.release.xcconfig"; path = "Target Support Files/Pods-Fortnite Stats-Fortnite StatsUITests/Pods-Fortnite Stats-Fortnite StatsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9539AACF24DFFCF6005078A4 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		A53DE357182A3BCE668DFE28 /* Pods-Fortnite StatsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fortnite StatsTests.debug.xcconfig"; path = "Target Support Files/Pods-Fortnite StatsTests/Pods-Fortnite StatsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C94D8C46A6B48C52A584AFBB /* Pods-Fortnite Stats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fortnite Stats.debug.xcconfig"; path = "Target Support Files/Pods-Fortnite Stats/Pods-Fortnite Stats.debug.xcconfig"; sourceTree = "<group>"; };
 		D3E8E684460A610739BF33C5 /* Pods_Fortnite_Stats_Fortnite_StatsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fortnite_Stats_Fortnite_StatsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -202,7 +202,6 @@
 			children = (
 				4C252ADB243F9E0B006FE8D3 /* StatsDetailVC+CVDelegate.swift */,
 				4C252ADD243F9EA6006FE8D3 /* StatsDetailVC+CVDataSource.swift */,
-				4C44979D2447E190003B3BE9 /* StatsDetailVC+ChartsDelegate.swift */,
 				4C3B17B3244A260400E48369 /* UIView+ProgrammaticConstraints.swift */,
 			);
 			path = Extensions;
@@ -286,6 +285,7 @@
 				4CD1170224391B0A0015B1F2 /* StatsDetailViewController.swift */,
 				4CEFE16C243FF76700C7BDFE /* StoreCollectionViewController.swift */,
 				4CEC2ABF2443131300D9BC9F /* StatsDetailCollectionViewController.swift */,
+				9539AACF24DFFCF6005078A4 /* TabBarController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -628,7 +628,6 @@
 				4CEFE1742440047200C7BDFE /* Cache.swift in Sources */,
 				4C5E60522441BA7400BA3E59 /* SquadStats.swift in Sources */,
 				4C5E604E2441BA5A00BA3E59 /* SoloStats.swift in Sources */,
-				4C44979E2447E190003B3BE9 /* StatsDetailVC+ChartsDelegate.swift in Sources */,
 				4CD11709243932C60015B1F2 /* StatsController.swift in Sources */,
 				4CEFE16D243FF76700C7BDFE /* StoreCollectionViewController.swift in Sources */,
 				4CD1171324394C110015B1F2 /* PlayerStats.swift in Sources */,
@@ -641,6 +640,7 @@
 				4CD116C9243915460015B1F2 /* AppDelegate.swift in Sources */,
 				4CD116CB243915460015B1F2 /* SceneDelegate.swift in Sources */,
 				4C5E60542441DBF500BA3E59 /* Stats.swift in Sources */,
+				9539AAD024DFFCF6005078A4 /* TabBarController.swift in Sources */,
 				4C5E60502441BA6500BA3E59 /* DuoStats.swift in Sources */,
 				4CEFE1702440032300C7BDFE /* ConcurrentOperations.swift in Sources */,
 				4CD1170E243943C40015B1F2 /* Constants.swift in Sources */,

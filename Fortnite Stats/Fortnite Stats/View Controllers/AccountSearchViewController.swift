@@ -12,7 +12,7 @@ class AccountSearchViewController: UIViewController, Storyboarded, UITextFieldDe
     
     weak var coordinator: MainCoordinator?
     let statsController = StatsController()
-    var platform: Platform = .pc
+    var platform: Platform = .kbm
     var searchedPlayer: PlayerStats? {
         didSet {
             updateViews()
@@ -75,10 +75,10 @@ class AccountSearchViewController: UIViewController, Storyboarded, UITextFieldDe
     
     func updateViews() {
         guard
-            let wins = searchedPlayer?.lifeTimeStats?[8].value,
-            let matches = searchedPlayer?.lifeTimeStats?[7].value,
-            let kills = searchedPlayer?.lifeTimeStats?[10].value,
-            let kdRatio = searchedPlayer?.lifeTimeStats?[11].value
+            let wins = searchedPlayer?.lifeTimeStats[8].value,
+            let matches = searchedPlayer?.lifeTimeStats[7].value,
+            let kills = searchedPlayer?.lifeTimeStats[10].value,
+            let kdRatio = searchedPlayer?.lifeTimeStats[11].value
             else { return }
         
         self.moreStatsButton.isHidden = false
@@ -88,18 +88,18 @@ class AccountSearchViewController: UIViewController, Storyboarded, UITextFieldDe
         self.mpDescriptionLabel.isHidden = false
         self.tkDescriptionLabel.isHidden = false
         self.kdDescriptionLabel.isHidden = false
-        self.userNameLabel.text = searchedPlayer?.userName
+        self.userNameLabel.text = searchedPlayer?.epicUserHandle
         self.totalWinsLabel.text = (wins)
         self.matchesPlayedLabel.text = matches
         self.totalKillsLabel.text = kills
         self.kdRatioLabel.text = kdRatio
         switch platform {
-        case .pc:
+        case .kbm:
             self.platformLabel.text = "PC"
-        case .psn:
-            self.platformLabel.text = "Playstation"
-        case .xbox:
-            self.platformLabel.text = "Xbox"
+        case .gamepad:
+            self.platformLabel.text = "Gross Controller"
+        case .touch:
+            self.platformLabel.text = "Mobile"
         }
     }
 
@@ -121,16 +121,16 @@ class AccountSearchViewController: UIViewController, Storyboarded, UITextFieldDe
     @IBAction func platformSelected(_ sender: Any) {
         switch platformControl.selectedSegmentIndex {
         case 0:
-            platform = .pc
+            platform = .kbm
             searchTextField.attributedPlaceholder = NSAttributedString(string: "Enter Epic Account ID:", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         case 1:
-            platform = .psn
+            platform = .gamepad
             searchTextField.attributedPlaceholder = NSAttributedString(string: "Enter Playstation ID:", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         case 2:
-            platform = .xbox
+            platform = .gamepad
             searchTextField.attributedPlaceholder = NSAttributedString(string: "Enter Xbox Gamertag:", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         default:
-            platform = .pc
+            platform = .kbm
             searchTextField.attributedPlaceholder = NSAttributedString(string: "Enter Epic Account ID:", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         }
     }

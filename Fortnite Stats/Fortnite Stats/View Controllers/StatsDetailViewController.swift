@@ -36,19 +36,19 @@ class StatsDetailViewController: UIViewController, Storyboarded {
     }
     
     func updateViews() {
+        guard let player = statsController?.playerStats else { return }
+        let lifeTime = player.lifeTimeStats
+        let wins = player.lifeTimeStats[8].value
+        let kills = player.lifeTimeStats[10].value
+        let matches = player.lifeTimeStats[7].value
+        let winRatio = player.lifeTimeStats[9].value
+        let top5 = player.lifeTimeStats[0].value
+        let top3 = player.lifeTimeStats[1].value
+        let top6 = player.lifeTimeStats[2].value
+        let top10 = player.lifeTimeStats[3].value
+        let top12 = player.lifeTimeStats[4].value
+        let top25 = player.lifeTimeStats[5].value
         guard
-            let player = statsController?.playerStats,
-            let lifeTime = player.lifeTimeStats,
-            let wins = player.lifeTimeStats?[8].value,
-            let kills = player.lifeTimeStats?[10].value,
-            let matches = player.lifeTimeStats?[7].value,
-            let winRatio = player.lifeTimeStats?[9].value,
-            let top5 = player.lifeTimeStats?[0].value,
-            let top3 = player.lifeTimeStats?[1].value,
-            let top6 = player.lifeTimeStats?[2].value,
-            let top10 = player.lifeTimeStats?[3].value,
-            let top12 = player.lifeTimeStats?[4].value,
-            let top25 = player.lifeTimeStats?[5].value,
             let top5Num = Double(top5),
             let top3Num = Double(top3),
             let top6Num = Double(top6),
@@ -75,7 +75,7 @@ class StatsDetailViewController: UIViewController, Storyboarded {
         for stat in lifeTime {
             print(stat)
         }
-        epicUsernameLabel.text = player.userName
+        epicUsernameLabel.text = player.epicUserHandle
 //        pieChartView.entryLabelFont = UIFont(name: "Montserrat-SemiBold", size: 15)
 //        pieChartView.centerText = "Placement"
         pieChartView.centerAttributedText = NSAttributedString(string: "Placement", attributes: [NSAttributedString.Key.font : UIFont(name: "BurbankBigCondensed-Black", size: 21)!, NSAttributedString.Key.foregroundColor : #colorLiteral(red: 1, green: 0.9471729398, blue: 0.3208206296, alpha: 1)])

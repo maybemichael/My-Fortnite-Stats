@@ -103,12 +103,12 @@ class StatsDetailCollectionViewCell: UICollectionViewCell {
         case .solos:
             gameModeLabel.text = "Solos"
             imageView.image = UIImage(named: "MySkin")
-            totalWinsLabel.text = player.stats.solos.wins
-            winRatioLabel.text = player.stats.solos.winRatio
-            totalKillsLabel.text = player.stats.solos.kills
-            kdLabel.text = player.stats.solos.killDeathRatio
-            kpgLabel.text = player.stats.solos.killsPerGame
-            totalMatchesLabel.text = player.stats.solos.matches
+            totalWinsLabel.text = player.soloWins
+            winRatioLabel.text = player.soloWinRatio
+            totalKillsLabel.text = player.soloKills
+            kdLabel.text = player.soloKD
+            kpgLabel.text = player.soloKillsPerGame
+            totalMatchesLabel.text = player.soloMatches
             top3DescriptionLabel.isHidden = true
             top6DescriptionLabel.isHidden = true
             top3Label.isHidden = true
@@ -116,12 +116,12 @@ class StatsDetailCollectionViewCell: UICollectionViewCell {
         case .duos:
             gameModeLabel.text = "Duos"
             imageView.image = UIImage(named: "SkullTrooper")
-            totalWinsLabel.text = player.stats.duos.wins
-            winRatioLabel.text = player.stats.duos.winRatio
-            totalKillsLabel.text = player.stats.duos.kills
-            kdLabel.text = player.stats.duos.killDeathRatio
-            kpgLabel.text = player.stats.duos.killsPerGame
-            totalMatchesLabel.text = player.stats.duos.matches
+            totalWinsLabel.text = player.duoWins
+            winRatioLabel.text = player.duoWinRatio
+            totalKillsLabel.text = player.duoKills
+            kdLabel.text = player.duoKD
+            kpgLabel.text = player.duoKillsPerGame
+            totalMatchesLabel.text = player.duoMatches
             top3DescriptionLabel.isHidden = true
             top6DescriptionLabel.isHidden = true
             top3Label.isHidden = true
@@ -129,12 +129,12 @@ class StatsDetailCollectionViewCell: UICollectionViewCell {
         case .squads:
             gameModeLabel.text = "Squads"
             imageView.image = UIImage(named: "FortniteBlackKnight")
-            totalWinsLabel.text = player.stats.squads.wins
-            winRatioLabel.text = player.stats.squads.winRatio
-            totalKillsLabel.text = player.stats.squads.kills
-            kdLabel.text = player.stats.squads.killDeathRatio
-            kpgLabel.text = player.stats.squads.killsPerGame
-            totalMatchesLabel.text = player.stats.squads.matches
+            totalWinsLabel.text = player.squadWins
+            winRatioLabel.text = player.squadWinRatio
+            totalKillsLabel.text = player.squadKills
+            kdLabel.text = player.squadKD
+            kpgLabel.text = player.squadKillsPerGame
+            totalMatchesLabel.text = player.squadMatches
             top3DescriptionLabel.isHidden = true
             top6DescriptionLabel.isHidden = true
             top3Label.isHidden = true
@@ -142,18 +142,18 @@ class StatsDetailCollectionViewCell: UICollectionViewCell {
         case .lifetime:
             gameModeLabel.text = "Lifetime Stats"
             imageView.image = UIImage(named: "RenegadeRaider")
-            totalWinsLabel.text = player.lifeTimeStats?[8].value
-            winRatioLabel.text = player.lifeTimeStats?[9].value
-            totalKillsLabel.text = player.lifeTimeStats?[10].value
-            kdLabel.text = player.lifeTimeStats?[11].value
-            kpgLabel.text = player.stats.squads.killsPerGame
-            totalMatchesLabel.text = player.lifeTimeStats?[7].value
+            totalWinsLabel.text = player.lifeTimeStats[8].value
+            winRatioLabel.text = player.lifeTimeStats[9].value
+            totalKillsLabel.text = player.lifeTimeStats[10].value
+            kdLabel.text = player.lifeTimeStats[11].value
+            kpgLabel.text = player.squadKillsPerGame
+            totalMatchesLabel.text = player.lifeTimeStats[7].value
             top3DescriptionLabel.isHidden = false
             top6DescriptionLabel.isHidden = false
             top3Label.isHidden = false
             top6Label.isHidden = false
-            top3Label.text = player.lifeTimeStats?[1].value
-            top6Label.text = player.lifeTimeStats?[2].value
+            top3Label.text = player.lifeTimeStats[1].value
+            top6Label.text = player.lifeTimeStats[2].value
         case .none:
             break
         }

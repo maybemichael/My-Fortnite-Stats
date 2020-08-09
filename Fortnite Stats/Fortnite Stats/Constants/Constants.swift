@@ -16,9 +16,9 @@ enum HTTPMethod: String {
 }
 
 enum Platform: String {
-    case pc
-    case psn
-    case xbox
+    case kbm
+    case gamepad
+    case touch
 }
 
 enum GameMode: String {
