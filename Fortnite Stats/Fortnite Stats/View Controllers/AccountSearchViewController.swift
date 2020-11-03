@@ -38,8 +38,11 @@ class AccountSearchViewController: UIViewController, Storyboarded, UITextFieldDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         launchSetupViews()
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     func launchSetupViews() {

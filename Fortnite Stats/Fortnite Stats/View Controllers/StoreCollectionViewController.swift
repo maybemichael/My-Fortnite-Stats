@@ -58,13 +58,13 @@ class StoreCollectionViewController: UICollectionViewController {
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return statsController.currentStore?.count ?? 0
+        return statsController.currentStore.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? StoreCollectionViewCell else { return UICollectionViewCell() }
     
-        let item = statsController.currentStore?[indexPath.item]
+        let item = statsController.currentStore[indexPath.item]
         cell.item = item
         loadImage(forCell: cell, forItemAt: indexPath)
 
@@ -74,7 +74,7 @@ class StoreCollectionViewController: UICollectionViewController {
     // MARK: Image Cache
     
     private func loadImage(forCell cell: StoreCollectionViewCell, forItemAt indexPath: IndexPath) {
-        guard let shopItem = statsController.currentStore?[indexPath.item] else { return }
+        let shopItem = statsController.currentStore[indexPath.item]
         
         // Check for image in cache
         if let cachedImage = cache.value(for: shopItem.name) {
@@ -185,8 +185,8 @@ class StoreCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         storeDetailView.isHidden = false
+        let item = statsController.currentStore[indexPath.item]
         guard
-            let item = statsController.currentStore?[indexPath.item],
             let data = try? Data(contentsOf: item.imageURL)
             else { return }
         itemNameLabel.text = item.name

@@ -45,6 +45,8 @@ class StatsDetailCollectionViewCell: UICollectionViewCell {
     override func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) {
         super.apply(layoutAttributes)
         
+        
+        
         // 1
         let standardHeight = FeaturedCellLayoutConstants.Cell.standardHeight
         let featuredHeight = FeaturedCellLayoutConstants.Cell.featuredHeight

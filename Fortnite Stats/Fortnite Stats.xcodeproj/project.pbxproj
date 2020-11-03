@@ -48,6 +48,9 @@
 		4CEFE1742440047200C7BDFE /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEFE1732440047200C7BDFE /* Cache.swift */; };
 		60CF9C4243F8FFB8AD7C2E45 /* Pods_Fortnite_StatsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50DBEFF81DCF0F05800A912E /* Pods_Fortnite_StatsTests.framework */; };
 		9539AAD024DFFCF6005078A4 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9539AACF24DFFCF6005078A4 /* TabBarController.swift */; };
+		958B5A6024E1F3060051DB9B /* TestJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958B5A5F24E1F3060051DB9B /* TestJSON.swift */; };
+		958B5A6224E20BC20051DB9B /* MockNetworkLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958B5A6124E20BC20051DB9B /* MockNetworkLoader.swift */; };
+		958B5A6424E20C1A0051DB9B /* NetworkDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958B5A6324E20C1A0051DB9B /* NetworkDataLoader.swift */; };
 		F719F471B29F88FB8B5DA914 /* Pods_Fortnite_Stats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E246BFD70442AC493A960957 /* Pods_Fortnite_Stats.framework */; };
 /* End PBXBuildFile section */
 
@@ -119,6 +122,9 @@
 		6AA27F176110F4771D43B730 /* Pods-Fortnite Stats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fortnite Stats.release.xcconfig"; path = "Target Support Files/Pods-Fortnite Stats/Pods-Fortnite Stats.release.xcconfig"; sourceTree = "<group>"; };
 		92E198D5E0842537BD9F2777 /* Pods-Fortnite Stats-Fortnite StatsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fortnite Stats-Fortnite StatsUITests.release.xcconfig"; path = "Target Support Files/Pods-Fortnite Stats-Fortnite StatsUITests/Pods-Fortnite Stats-Fortnite StatsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9539AACF24DFFCF6005078A4 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		958B5A5F24E1F3060051DB9B /* TestJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestJSON.swift; sourceTree = "<group>"; };
+		958B5A6124E20BC20051DB9B /* MockNetworkLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkLoader.swift; sourceTree = "<group>"; };
+		958B5A6324E20C1A0051DB9B /* NetworkDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataLoader.swift; sourceTree = "<group>"; };
 		A53DE357182A3BCE668DFE28 /* Pods-Fortnite StatsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fortnite StatsTests.debug.xcconfig"; path = "Target Support Files/Pods-Fortnite StatsTests/Pods-Fortnite StatsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C94D8C46A6B48C52A584AFBB /* Pods-Fortnite Stats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fortnite Stats.debug.xcconfig"; path = "Target Support Files/Pods-Fortnite Stats/Pods-Fortnite Stats.debug.xcconfig"; sourceTree = "<group>"; };
 		D3E8E684460A610739BF33C5 /* Pods_Fortnite_Stats_Fortnite_StatsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fortnite_Stats_Fortnite_StatsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +181,7 @@
 			children = (
 				4C6E66A7243E834600DA0E1B /* TextField.swift */,
 				4CEFE1732440047200C7BDFE /* Cache.swift */,
+				958B5A6324E20C1A0051DB9B /* NetworkDataLoader.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -257,6 +264,8 @@
 			children = (
 				4CD116DF243915470015B1F2 /* Fortnite_StatsTests.swift */,
 				4CD116E1243915470015B1F2 /* Info.plist */,
+				958B5A5F24E1F3060051DB9B /* TestJSON.swift */,
+				958B5A6124E20BC20051DB9B /* MockNetworkLoader.swift */,
 			);
 			path = "Fortnite StatsTests";
 			sourceTree = "<group>";
@@ -622,6 +631,7 @@
 				4CD117062439223B0015B1F2 /* Coordinator.swift in Sources */,
 				4C6E66A8243E834600DA0E1B /* TextField.swift in Sources */,
 				4C38FA2C2444ADC400C665CC /* FeaturedCellLayout.swift in Sources */,
+				958B5A6424E20C1A0051DB9B /* NetworkDataLoader.swift in Sources */,
 				4CD11705243922330015B1F2 /* Storyboarded.swift in Sources */,
 				4C5E604C2441BA0F00BA3E59 /* LifeTimeStats.swift in Sources */,
 				4CD11701243919870015B1F2 /* AccountSearchViewController.swift in Sources */,
@@ -654,6 +664,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CD116E0243915470015B1F2 /* Fortnite_StatsTests.swift in Sources */,
+				958B5A6024E1F3060051DB9B /* TestJSON.swift in Sources */,
+				958B5A6224E20BC20051DB9B /* MockNetworkLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

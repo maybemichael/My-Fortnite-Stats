@@ -25,7 +25,7 @@ class StatsController {
         var request = URLRequest(url: requestURL)
         request.httpMethod = HTTPMethod.get.rawValue
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue(apiKey, forHTTPHeaderField: headerField)
+        request.setValue(apiKey, forHTTPHeaderField: headerField)
 
         print(request)
         
